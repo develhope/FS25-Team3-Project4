@@ -8,8 +8,8 @@ const Navbar = () => {
             <ul className="nav-list">
                 <li className="nav-item">Home</li>
                 <li className="nav-item">Chi siamo</li>
-                <li className="nav-item">Marche</li>
-                <li className="nav-item">Prenota un test ride</li>
+                <li className="nav-item">Gamma</li>
+                <li className="nav-item">Prenota un Test Ride</li>
             </ul> 
             </div>
             <div className="dx-nav">     
