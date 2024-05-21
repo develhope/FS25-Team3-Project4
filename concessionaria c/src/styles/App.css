@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('src/assets/Logo/Screenshot_2024-05-21_184827.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: black;
+  }
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    width: 100%;
+    /*background-image: url('../assets/Moto/ducati-panigale-v4-r.jpg');*/
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
