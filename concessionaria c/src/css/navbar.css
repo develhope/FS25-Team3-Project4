@@ -1,27 +1,32 @@
-
- 
 .navbar {
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    /* padding: 0 20px;     */
+    margin-top: 3%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
-
 .nav-list, .nav-options {
     list-style: none; 
     margin: 0; 
     padding: 0; 
     display: flex; 
 }
-
 .nav-item, .options-item {
-    margin-right: 20px; 
+    margin-right: 20px;
+    cursor: pointer;
 }
-
+.nav-item:hover, .options-item:hover{
+    text-decoration: underline;
+}
+.profile {
+    cursor: pointer;
+}
+.profile:hover {
+    text-decoration: underline;
+}
 .nav-item:last-child, .options-item:last-child {
     margin-right: 0; 
 }
-
 .navbar-container {
     display: flex;
     justify-content: space-between; 
@@ -30,8 +35,6 @@
     width: 50%; 
     padding: 15px 20px; 
     background-color: lightgrey; 
-    border-radius: 20px;
-    border: solid;
+    border-radius: 10px;
+    border: solid gray
 }
-
-
