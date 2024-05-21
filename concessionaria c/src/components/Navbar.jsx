@@ -1,8 +1,9 @@
 import React, { useState, useContext } from 'react';
-import "../css/navbar.css";
+import { Link } from 'react-router-dom';
+import "../styles/navbar.css";
 import RegistrationForm from './RegistrationForm';
 import LoginForm from './LoginForm';
-import { RegistrationContext } from './RegistrationContext';
+import { RegistrationContext } from '../contexts/RegistrationContext';
 
 const Navbar = () => {
     const [isRegisterDropdownOpen, setIsRegisterDropdownOpen] = useState(false);
@@ -34,15 +35,14 @@ const Navbar = () => {
             <div className="navbar-container">
                 <div className="sx-nav">
                     <ul className="nav-list">
-                        <li className="nav-item">Home</li>
+                        <li className="nav-item"><Link to="/">Home</Link></li>
+                        <li className="nav-item"><Link to="/gamma">Gamma</Link></li>
                         <li className="nav-item">Chi siamo</li>
-                        <li className="nav-item">Gamma</li>
-                        <li className="nav-item">Prenota un Test Ride</li>
                     </ul> 
                 </div>
                 <div className="dx-nav">
                     {currentUser ? (
-                        <div className="profile">Il mio profilo</div>
+                        <div className="profile"><Link to="/profile">Il mio profilo</Link></div>
                     ) : (
                         <ul className="nav-options">
                             <li className="options-item" onClick={toggleLoginDropdown}>Accedi</li>

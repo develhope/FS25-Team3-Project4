@@ -1,15 +1,28 @@
-import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar';
-import { RegistrationProvider } from './RegistrationContext';
-import '../css/App.css';
+import Gamma from './Gamma';
+import Profile from './Profile';
+import Home from './Home';
+import '../styles/App.css';
+import { RegistrationProvider } from '../contexts/RegistrationContext';
+import { SelectedBikesProvider } from '../contexts/SelectedBikesContext';
 
 function App() {
   return (
-    <RegistrationProvider>
-      <div className="app-container">
-        <Navbar />
-      </div>
-    </RegistrationProvider>
+    <Router>
+      <RegistrationProvider>
+        <SelectedBikesProvider>
+          <div className="app-container">
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/gamma" element={<Gamma />} />
+              <Route path="/profile" element={<Profile />} />
+            </Routes>
+          </div>
+        </SelectedBikesProvider>
+      </RegistrationProvider>
+    </Router>
   );
 }
 
