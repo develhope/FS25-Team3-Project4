@@ -1,0 +1,33 @@
+.registration-form {
+    position: absolute;
+    right: 24%;
+    top: 11%;
+    background: lightgray;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+.form-group {
+    margin-bottom: 1em;
+}
+label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+input {
+    width: 100%;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #555;
+}

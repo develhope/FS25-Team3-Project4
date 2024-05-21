@@ -1,12 +1,15 @@
 import React from 'react';
 import Navbar from './Navbar';
+import { RegistrationProvider } from './RegistrationContext';
 import '../css/App.css';
 
 function App() {
   return (
-    <div className="app-container">
-      <Navbar />
-    </div>
+    <RegistrationProvider>
+      <div className="app-container">
+        <Navbar />
+      </div>
+    </RegistrationProvider>
   );
 }
 
