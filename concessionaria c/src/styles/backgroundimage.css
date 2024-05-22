@@ -1,0 +1,7 @@
+.background-image{
+    background-image: url('src/assets/Logo/Screenshot_2024-05-21_184827.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px;
+}

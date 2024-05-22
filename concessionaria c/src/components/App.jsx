@@ -6,6 +6,7 @@ import Home from './Home';
 import '../styles/App.css';
 import { RegistrationProvider } from '../contexts/RegistrationContext';
 import { SelectedBikesProvider } from '../contexts/SelectedBikesContext';
+import '../styles/backgroundimage.css';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <RegistrationProvider>
         <SelectedBikesProvider>
           <div className="app-container">
+            <div className='background-image'></div>
             <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
