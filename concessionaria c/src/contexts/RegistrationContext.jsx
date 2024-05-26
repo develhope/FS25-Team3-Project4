@@ -4,7 +4,8 @@ export const RegistrationContext = createContext();
 
 export const RegistrationProvider = ({ children }) => {
     const [registrations, setRegistrations] = useState([
-        { username: 'Dartakk', email: 'damiatafrancesco@gmail.com', password: '123456' }
+        { username: 'Dartakk', email: 'damiatafrancesco@gmail.com', password: '123456' },
+       
     ]);
     const [currentUser, setCurrentUser] = useState(null);
 
