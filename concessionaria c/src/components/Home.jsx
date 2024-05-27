@@ -1,4 +1,5 @@
 import '../styles/home.css';
+import ChatBot from './chat';
 
 const Home = () => {
   return (
@@ -8,6 +9,8 @@ const Home = () => {
       <p>Con i nostri vent'anni di attività ed esperienza nel settore delle due ruote la CONCESSIONARIA C è una
          delle aziende più longeve e specializzate del settore nata grazie al suo fondatore Francesco Nobile,
          Francesco Damiata, Alessandro Amoroso e Mike Darmand!</p>
+
+         <ChatBot />
     </div>
   );
 };
