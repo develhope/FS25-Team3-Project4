@@ -8,8 +8,6 @@ import { RegistrationProvider } from '../contexts/RegistrationContext';
 import { SelectedBikesProvider } from '../contexts/SelectedBikesContext';
 import '../styles/backgroundimage.css';
 
-
-
 function App() {
   return (
     <Router>

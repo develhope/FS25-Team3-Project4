@@ -1,9 +1,112 @@
 .home-container {
     padding: 2em;
     text-align: center;
-    color: white;
-   /* background-image: url('../assets/Moto/ducati-panigale-v4-r.jpg');*/
+    color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.home-container h1 {
+.product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+}
+.product-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    -webkit-box-shadow: 1px 3px 71px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 3px 71px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 3px 71px 0px rgba(0,0,0,0.75);
+}
+.product-image img {
+    width: 60%;
+    height: auto;
+}
+.product-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 2em;
+    border-radius: 100px 100px 0px 100px;
+    -moz-border-radius: 10px 100px 0px 100px;
+    -webkit-border-radius: 100px 100px 0px 0px;
+    border: 2px solid #928c85;
+    -webkit-box-shadow: 14px 15px 58px 19px rgba(0,0,0,0.68);
+    -moz-box-shadow: 14px 15px 58px 19px rgba(0,0,0,0.68);
+    box-shadow: 14px 15px 58px 19px rgba(0,0,0,0.68);
+}
+.product-details .product-info {
     margin-bottom: 1em;
 }
+.prices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button {
+    padding: 0.5em 1em;
+    font-size: 1em;
+    background-color: #007bff;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.banner img {
+    width: 10%;
+    height: 100px;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.text-and-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+.text-content {
+    text-align: left;
+    margin-right: 2em;
+    border-radius: 100px 100px 0px 100px;
+    -moz-border-radius: 10px 100px 0px 100px;
+    -webkit-border-radius: 0px 100px 0px 0px;
+    border: 2px solid #928c85;
+    -webkit-box-shadow: 14px 15px 58px 19px rgba(0,0,0,0.68);
+    -moz-box-shadow: 14px 15px 58px 19px rgba(0,0,0,0.68);
+    box-shadow: 14px 15px 58px 19px rgba(0,0,0,0.68);
+}
+.image-content img {
+    width: 80%; 
+    height: auto;
+    -webkit-box-shadow: 1px 3px 71px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 3px 71px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 3px 71px 0px rgba(0,0,0,0.75);
+}
+.text-and-image{
+    margin-top: 20%;
+}
+.location {
+    width: 100%;
+    height: 450px; 
+    margin-bottom: 20px;
+  }
+  .location iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
