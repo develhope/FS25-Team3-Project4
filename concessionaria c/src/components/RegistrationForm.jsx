@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
+import { useRegistration } from '../contexts/RegistrationContext';
+import { useNavigate } from 'react-router-dom';
 import '../styles/registrationForm.css';
 
-const RegistrationForm = ({ onRegister }) => {
+const RegistrationForm = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const { registerUser } = useRegistration();
+    const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        onRegister({ username, email, password });
+        await registerUser({ username, email, password });
+        navigate('/login');
     };
 
     return (
