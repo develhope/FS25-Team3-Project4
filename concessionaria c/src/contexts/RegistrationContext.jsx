@@ -1,17 +1,23 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 export const RegistrationContext = createContext();
+
+export const useRegistration = () => useContext(RegistrationContext);
 
 export const RegistrationProvider = ({ children }) => {
     const [registrations, setRegistrations] = useState([
         { username: 'Dartakk', email: 'damiatafrancesco@gmail.com', password: '123456' },
-       
     ]);
     const [currentUser, setCurrentUser] = useState(null);
 
     const registerUser = (userData) => {
-        setRegistrations([...registrations, userData]);
-        console.log('User registered:', userData);
+        const isExistingUser = registrations.some(user => user.username === userData.username || user.email === userData.email);
+        if (!isExistingUser) {
+            setRegistrations(prevRegistrations => [...prevRegistrations, userData]);
+            console.log('User registered:', userData);
+        } else {
+            console.error('User already exists.');
+        }
     };
 
     const loginUser = (userData) => {
