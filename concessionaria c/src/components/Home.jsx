@@ -60,7 +60,7 @@ const Home = () => {
           </div>
           <div className="prices">
             <div className="original-price">Prezzo: €30.000</div>
-            <div className="discount-price">Prezzo scontato: €25.000</div>
+            <div className="discount-price">Nuovo Prezzo: €25.000</div>
           </div>
           <button>Scopri ora</button>
         </div>

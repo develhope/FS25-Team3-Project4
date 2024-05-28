@@ -7,13 +7,15 @@ const Profile = () => {
   const { currentUser } = useContext(RegistrationContext);
   const { selectedBikes, setSelectedBikes } = useContext(SelectedBikesContext);
   const [selectedBike, setSelectedBike] = useState(null);
+  const [avatar, setAvatar] = useState(null);
 
-  const handleConfirm = () => {
-    alert('Test ride confirmed for ' + selectedBike.name);
+  const handleAvatarChange = (event) => {
+    const file = event.target.files[0];
+    setAvatar(URL.createObjectURL(file));
   };
 
-  const handleCancel = (bike) => {
-    setSelectedBikes(selectedBikes.filter(b => b.id !== bike.id));
+  const handleDeleteSelectedBike = (bikeId) => {
+    setSelectedBikes(selectedBikes.filter(bike => bike.id !== bikeId));
     setSelectedBike(null);
   };
 
@@ -23,6 +25,15 @@ const Profile = () => {
         <>
           <div className="profile-info">
             <h2>Il mio profilo</h2>
+            <div className="avatar-container">
+              <img src={avatar ? avatar : currentUser.avatar} className="avatar" />
+              {!avatar && (
+                <>
+                  <input type="file" accept="image/*" onChange={handleAvatarChange} className="avatar-input" />
+                  <label className="avatar-label">Avatar</label>
+                </>
+              )}
+            </div>
             <p><strong>Utente:</strong> {currentUser.username}</p>
           </div>
           <div className="test-ride-section">
@@ -46,8 +57,8 @@ const Profile = () => {
               <div className="test-ride-details">
                 <h4>{selectedBike.name}</h4>
                 <p>{selectedBike.price}</p>
-                <button onClick={handleConfirm}>Conferma Test Ride</button>
-                <button onClick={() => handleCancel(selectedBike)}>Cancella</button>
+                <button onClick={() => alert('Test ride confirmed for ' + selectedBike.name)}>Conferma Test Ride</button>
+                <button onClick={() => handleDeleteSelectedBike(selectedBike.id)}>Cancella</button>
               </div>
             )}
           </div>
