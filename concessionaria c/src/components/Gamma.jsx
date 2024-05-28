@@ -12,6 +12,8 @@ const Gamma = () => {
     navigate('/profile');
   };
 
+  const availableBikes = [0, 1, 2, 3, 5, 6, 8, 10, 11]; 
+
   const bikes = [
     { id: 1, name: 'Ducati Panigale V4 R', price: '€43,000', image: 'src/assets/Moto/64de49eea7a06.r_d.1500-1000-0.jpeg' },
     { id: 2, name: 'Ducati StreetFighter V4 R', price: '€20,190', image: 'src/assets/Moto/ducati-streetfighter-v4-sp-copertina.jpg' },
@@ -29,13 +31,20 @@ const Gamma = () => {
 
   return (
     <div className="gamma-container">
-      {bikes.map(bike => (
+      {bikes.map((bike, index) => (
         <div key={bike.id} className="bike-item">
           <img src={bike.image} alt={bike.name} className="bike-image" />
           <div className="bike-info">
             <h3>{bike.name}</h3>
             <p>{bike.price}</p>
-            <button onClick={() => handleTestRide(bike)}>Prenota il Test Ride</button>
+            {availableBikes.includes(index) ? (
+              <p style={{ color: 'green' }}>Disponibile</p>
+            ) : (
+              <p style={{ color: 'red' }}>Non disponibile</p>
+            )}
+            {availableBikes.includes(index) && (
+              <button onClick={() => handleTestRide(bike)}>Prenota il Test Ride</button>
+            )}
           </div>
         </div>
       ))}
