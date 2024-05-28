@@ -6,13 +6,28 @@
     background-color: transparent;
 }
 .bike-item {
-    border: 2px solid lightsalmon;
     padding: 1em;
     width: calc(33% - 2em);
     box-sizing: border-box;
     text-align: center;
-    background-color: transparent;
-    border-radius: 20px;
+    /*background-color: transparent;
+    border: 2px solid lightsalmon;
+    border-radius: 20px;*/
+    overflow: hidden;
+    border-radius: 100px 100px 0px 100px;
+    -moz-border-radius: 10px 100px 0px 100px;
+    -webkit-border-radius: 50px 0px 50px 0px;
+    border: 2px solid #928c85;
+    -webkit-box-shadow: 1px 3px 71px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 3px 71px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 3px 71px 0px rgba(0,0,0,0.75);
+
+}
+.bike-item img {
+    transition: transform 0.3s ease;
+}
+.bike-item:hover img {
+    transform: scale(1.2, 1); 
 }
 .bike-image {
     width: 100%;
